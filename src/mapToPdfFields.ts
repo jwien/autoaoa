@@ -16,7 +16,7 @@ export interface aoaInfo {
 
 
 const mapToPdfFieldNames = (pdfForm: PDFForm, newAoaData: aoaInfo) => {
-    pdfForm.getFields().forEach(field => console.log(field.getName()));
+    // pdfForm.getFields().forEach(field => console.log(field.getName()));
     const cadnameField = <PDFTextField> pdfForm.getField("Appraisal District Name");
     const ownernameField = <PDFTextField> pdfForm.getField("Name");
     const addressField = <PDFTextField> pdfForm.getField("Address");
