@@ -41,8 +41,7 @@ const mapToPdfFieldNames = (pdfForm: PDFForm, newAoaData: aoaInfo) => {
     addressField.setText(newAoaData.address);
     citystatezipField.setText(newAoaData.citystatezip);
 
-    // propertiesListedBelowCheck.check();
-    if (newAoaData.properties.length === 1) {
+    if (newAoaData.properties.length === 0) {
         propertiesListedAboveCheck.check();
         return;
     } else {
