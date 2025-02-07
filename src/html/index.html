@@ -13,20 +13,20 @@
         <form id="clientinfo">
           <div class="mb-3">
             <label for="inputCadname" class="form-label">What county are your properties in?</label>
-            <input type="text" class="form-control" name="inputCadname" aria-describedby="cadnameHelp">
+            <input type="text" class="form-control" name="inputCadname" aria-describedby="cadnameHelp" required aria-required="true">
             <div id="cadnameHelp" class="form-text">If you have properties in multiple counties, you'll need to do this seperately for each county.</div>
           </div>
           <div class="mb-3">
             <label for="inputOwnername" class="form-label">Name of property owner</label>
-            <input type="text" class="form-control" name="inputOwnername">
+            <input type="text" class="form-control" name="inputOwnername" required aria-required="true">
           </div>
           <div class="mb-3">
             <label for="inputHomeaddress" class="form-label">Mailing address</label>
-            <input type="text" class="form-control" name="inputHomeaddress">
+            <input type="text" class="form-control" name="inputHomeaddress" required aria-required="true">
           </div>
           <div class="mb-3">
             <label for="inputCitystatezip" class="form-label">City, state, and zipcode</label>
-            <input type="text" class="form-control" name="inputCitystatezip">
+            <input type="text" class="form-control" name="inputCitystatezip" required aria-required="true">
           </div>
           <button type="submit" class="btn btn-primary" id="clientinfo-submit" data-bs-toggle="modal" data-bs-target="#more-properties-prompt">Next</button>
         </form>
@@ -38,7 +38,7 @@
           <div class="mb-3" id="input-prop0">
             <div class="mb-3">
               <label for="inputPropaddress0" class="form-label">Property address</label>
-              <input type="text" class="form-control" name="inputPropaddress0">
+              <input type="text" class="form-control" name="inputPropaddress0" required aria-required="true">
             </div> 
             <div class="mb-3">
               <label for="inputProppid0" class="form-label">Property ID</label>
@@ -53,7 +53,7 @@
           <div class="mb-3" id="input-prop1">
             <div class="mb-3">
               <label for="inputPropaddress1" class="form-label">Property address</label>
-              <input type="text" class="form-control" name="inputPropaddress1">
+              <input type="text" class="form-control" name="inputPropaddress1" required aria-required="true">
             </div> 
             <div class="mb-3">
               <label for="inputProppid1" class="form-label">Property ID</label>
@@ -68,7 +68,7 @@
           <div class="mb-3" id="input-prop2">
             <div class="mb-3">
               <label for="inputPropaddress2" class="form-label">Property address</label>
-              <input type="text" class="form-control" name="inputPropaddress2">
+              <input type="text" class="form-control" name="inputPropaddress2" required aria-required="true">
             </div> 
             <div class="mb-3">
               <label for="inputProppid2" class="form-label">Property ID</label>
@@ -83,7 +83,7 @@
           <div class="mb-3" id="input-prop3">
             <div class="mb-3">
               <label for="inputPropaddress3" class="form-label">Property address</label>
-              <input type="text" class="form-control" name="inputPropaddress3">
+              <input type="text" class="form-control" name="inputPropaddress3" required aria-required="true">
             </div> 
             <div class="mb-3">
               <label for="inputProppid3" class="form-label">Property ID</label>
@@ -114,6 +114,24 @@
             </div>
             <div class="modal-body">
                 <p>Did you have any other properties to protest?<p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="modal-btn-false" data-val="">No</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="modal-btn-true" data-val="1">Yes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="include-owner-property" tabindex="-1" aria-labelledby="my-modal-label" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="my-modal-label">Owner's Address Protest Inclination</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Is the property you identified in the previous step also a property you wish to have protested?<p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="modal-btn-false" data-val="">No</button>
