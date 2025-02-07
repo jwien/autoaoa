@@ -28,7 +28,7 @@
             <label for="inputCitystatezip" class="form-label">City, state, and zipcode</label>
             <input type="text" class="form-control" name="inputCitystatezip" required aria-required="true">
           </div>
-          <button type="submit" class="btn btn-primary" id="clientinfo-submit" data-bs-toggle="modal" data-bs-target="#more-properties-prompt">Next</button>
+          <button type="submit" class="btn btn-primary" id="clientinfo-submit">Next</button>
         </form>
       </section>
 
@@ -116,14 +116,14 @@
                 <p>Did you have any other properties to protest?<p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="modal-btn-false" data-val="">No</button>
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="modal-btn-true" data-val="1">Yes</button>
+              <button type="button" class="btn btn-secondary modal-option" data-bs-dismiss="modal" id="more-properties-prompt-false" data-val="">No</button>
+              <button type="button" class="btn btn-primary modal-option" data-bs-dismiss="modal" id="more-properties-prompt-true" data-val="1">Yes</button>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="modal fade" id="include-owner-property" tabindex="-1" aria-labelledby="my-modal-label" aria-hidden="true">
+      <div class="modal fade" id="include-owner-property-prompt" tabindex="-1" aria-labelledby="my-modal-label" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -134,8 +134,8 @@
                 <p>Is the property you identified in the previous step also a property you wish to have protested?<p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="modal-btn-false" data-val="">No</button>
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="modal-btn-true" data-val="1">Yes</button>
+              <button type="button" class="btn btn-secondary modal-option modal-option-false" data-bs-dismiss="modal" id="include-owner-property-prompt-false" data-val="">No</button>
+              <button type="button" class="btn btn-primary modal-option modal-option-true" data-bs-dismiss="modal" id="include-owner-property-prompt-true" data-val="1">Yes</button>
             </div>
           </div>
         </div>
